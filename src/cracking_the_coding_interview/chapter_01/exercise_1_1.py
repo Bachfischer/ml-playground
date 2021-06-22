@@ -1,4 +1,8 @@
 """
+Is Unique:
+Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+
+*********
 The time complexity for this code is O(n), where n is the length of the string.
 The space complexity is O(1).
 """
