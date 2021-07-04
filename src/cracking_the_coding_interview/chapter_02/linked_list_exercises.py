@@ -63,6 +63,9 @@ class Node:
             front_node.next_node = node_to_delete.next_node
         return self
 
+    """
+    Exercise 2.1
+    """
     def remove_duplicates(self):
         stored_data = {}
         current_node = self
@@ -72,7 +75,6 @@ class Node:
                 stored_data[current_node.data] = 1
             current_node = current_node.next_node
 
-        #print(stored_data)
         start_node = None
         for key in stored_data.keys():
             if start_node is None:
@@ -82,9 +84,20 @@ class Node:
 
         return start_node
 
+"""
+Exercise 2.3
+"""
+def remove_middle_node(node_to_remove: Node):
+    if node_to_remove.next_node is None:
+        return False
+    node_to_remove.data = node_to_remove.next_node.data
+    node_to_remove.next_node = node_to_remove.next_node.next_node
+    return True
 
 
-
+"""
+Exercise 2.2
+"""
 def print_kth_to_last_element(head, k: int):
     if head is None:
         return 0
@@ -123,6 +136,15 @@ def main():
     head = head.remove_duplicates()
 
     head.print_data()
+    head.append_to_tail(35)
+
+    # Remove middle node (exercise 2.3)
+    head.print_data()
+    middle_node = head.get_element_by_index(2)
+    print("Data of middle node: ", middle_node.data)
+    remove_middle_node(middle_node)
+    head.print_data()
+
 
 if __name__ == "__main__":
     main()
