@@ -1,10 +1,7 @@
-# 99, #112, #119
-#
-
-# Idea: Pick random number 1 - 3 to choose between curent node, left and right node
-# Would need to factor into account total number of nodes (to make probability of choosing current node lower)
-# TODO: As you descent the tree, you need to increase the probability / decrease the range to sample from
-
+"""
+Random Node:
+You are implementing a binary tree class from scratch which, in addition to insert, find, and delete, has a method getRandomNode() which returns a random node from the tree. All nodes should be equally likely to be chosen. Design and implement an algorithm for getRandomNode, and explain how you would implement the rest of the methods.
+"""
 import random
 
 class Node:
