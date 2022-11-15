@@ -5,9 +5,16 @@ name = "pypi"
 
 [packages]
 ipython = "*"
+matplotlib = "*"
+torchvision = "*"
+black = "*"
+mlflow = "*"
 
 [dev-packages]
 torch-tb-profiler = "*"
+ipykernel = "*"
+ipywidgets = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.9"
